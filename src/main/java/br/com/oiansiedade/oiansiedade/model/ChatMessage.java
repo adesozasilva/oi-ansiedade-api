@@ -1,6 +1,5 @@
 package br.com.oiansiedade.oiansiedade.model;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,18 +14,19 @@ public class ChatMessage {
 	private Long id;
     private MessageType type;
     private String content;
-    
-    @ManyToOne(cascade = CascadeType.ALL)
-    private User user;
+    @ManyToOne
+    private User sender;
+    @ManyToOne
+    private User recipient;
 
     public static enum MessageType { CHAT, JOIN, LEAVE }
     
     public ChatMessage() {}
 
-    public ChatMessage(MessageType type, String content, User user) {
+    public ChatMessage(MessageType type, String content, User sender) {
 		this.type = type;
 		this.content = content;
-		this.user = user;
+		this.sender = sender;
 	}
 
 	public MessageType getType() {
@@ -37,9 +37,21 @@ public class ChatMessage {
         return content;
     }
     
-    public User getUser() {
-		return user;
+    public User getRecipient() {
+		return recipient;
 	}
     
+    public void setRecipient(User user) {
+		this.recipient = user;
+	}
+    
+    public User getSender() {
+		return sender;
+	}
+    
+    public void setSender(User sender) {
+		this.sender = sender;
+	}
+
 
 }

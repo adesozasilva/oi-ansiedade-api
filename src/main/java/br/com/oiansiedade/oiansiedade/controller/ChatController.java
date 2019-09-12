@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.oiansiedade.oiansiedade.model.ChatMessage;
-import br.com.oiansiedade.oiansiedade.model.User;
-import br.com.oiansiedade.oiansiedade.repository.ChatMessageRepository;
-import br.com.oiansiedade.oiansiedade.repository.UserRepository;
+import br.com.oiansiedade.oiansiedade.service.ChatMessageService;
 
 
 @RestController
@@ -21,24 +19,23 @@ import br.com.oiansiedade.oiansiedade.repository.UserRepository;
 public class ChatController {
 	
 	@Autowired
-	private ChatMessageRepository chatMessagerepository;
-	@Autowired
-	private UserRepository userRepository;
+	private ChatMessageService chatMessageservice;
 
 	@PostMapping
 	public ChatMessage sendMessage(@RequestBody ChatMessage chatMessage) {
-		chatMessagerepository.save(chatMessage);
-		ChatMessage messageChatBot = new ChatMessage(ChatMessage.MessageType.CHAT,"Olá meu amigo!", new User("Ansiosinho"));
-		chatMessagerepository.save(messageChatBot);
+		
+		ChatMessage messageChatBot = chatMessageservice.sendMessage(chatMessage);
+		
 		return messageChatBot;
 	}
-
+	
 	@GetMapping
-	public List<ChatMessage> addUser(@RequestParam("user")  String user) {
-		User username = userRepository.findByUsername(user);
-		List<ChatMessage> messages = (List<ChatMessage>) chatMessagerepository.findByUser(username);
+	public List<ChatMessage> getMessages(@RequestParam("username") String username) {
 		
+		List<ChatMessage> messages = chatMessageservice.findMessagesByUsername(username);
+
 		return messages;
 	}
+
 
 }

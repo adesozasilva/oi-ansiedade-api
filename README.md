@@ -4,9 +4,9 @@
 
 TESTES (UNITÁRIOS + INTEGRAÇÃO + UI)	    		+ 1  OU + 2 OU + 3 PONTOS
 
-<del> ~~ USO DE BANCO DE DADOS 						+ 2 PONTOS ~~ <del>
+<del> USO DE BANCO DE DADOS 						+ 2 PONTOS <del>
 
-<del> ~~ DEPLOY VIA DOCKER								+ 1 PONTO ~~ <del>
+<del> DEPLOY VIA DOCKER								+ 1 PONTO <del>
 
 COMUNICAÇÃO SINCRONA API	COM SWAGGER		+ 2 PONTOS
 

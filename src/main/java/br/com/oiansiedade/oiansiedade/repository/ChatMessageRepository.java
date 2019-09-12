@@ -9,6 +9,6 @@ import br.com.oiansiedade.oiansiedade.model.User;
 
 public interface ChatMessageRepository extends CrudRepository<ChatMessage, Integer> {
 	
-	List<ChatMessage> findByUser(User user);
+	List<ChatMessage> findByRecipient(User recipient);
 
 }

@@ -8,7 +8,7 @@ var messageInput = document.querySelector('#message');
 var messageArea = document.querySelector('#messageArea');
 var connectingElement = document.querySelector('.connecting');
 
-var user = {
+var sender = {
 	username: ""	
 };
 
@@ -18,9 +18,9 @@ var colors = [
 ];
 
 function connect(event) {
-	user.username = document.querySelector('#name').value.trim();
+	sender.username = document.querySelector('#name').value.trim();
     
-    if(user.username) {
+    if(sender.username) {
         usernamePage.classList.add('hidden');
         chatPage.classList.remove('hidden');
     }
@@ -31,12 +31,12 @@ function connect(event) {
 
 
 function onConnected() {
-	var chatMessage = JSON.parse('{"type":"JOIN","content":null,"user":{"username":"Anderson"}}');
+	var chatMessage = JSON.parse('{"type":"JOIN","content":null,"sender":{"username":"Anderson"}}');
 	onMessageReceived(chatMessage);
 	var request = new XMLHttpRequest();
-	request.open('GET', 'http://localhost:8080/messages?user=Anderson', true);
+	request.open('GET', 'http://localhost:8080/messages?username=Anderson', true);
 	request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-	request.send(JSON.stringify(chatMessage));
+	request.send();
 	request.onload = function() {
 		if(request.status === 200) {
 			console.log(request.status)
@@ -57,7 +57,7 @@ function onConnected() {
 
 
 function onError() {
-    connectingElement.textContent = 'Could not connect to  server. Please refresh this page to try again!';
+    connectingElement.textContent = 'Não foi pssível conectar ao servidor. Por favor atualize a página e tente novamente!';
     connectingElement.style.color = 'red';
 }
 
@@ -67,7 +67,7 @@ function sendMessage(event) {
 
     if(messageContent) {
         var chatMessage = {
-            user: user,
+            sender: sender,
             content: messageInput.value,
             type: 'CHAT'
         };
@@ -107,22 +107,22 @@ function onMessageReceived(message) {
 
     if(message.type === 'JOIN') {
         messageElement.classList.add('event-message');
-        message.content = message.user.username + ' joined!';
+        message.content = message.sender.username + ' joined!';
     } else if (message.type === 'LEAVE') {
         messageElement.classList.add('event-message');
-        message.content = message.user.username + ' left!';
+        message.content = message.sender.username + ' left!';
     } else {
         messageElement.classList.add('chat-message');
 
         var avatarElement = document.createElement('i');
-        var avatarText = document.createTextNode(message.user.username[0]);
+        var avatarText = document.createTextNode(message.sender.username[0]);
         avatarElement.appendChild(avatarText);
-        avatarElement.style['background-color'] = getAvatarColor(message.user.username);
+        avatarElement.style['background-color'] = getAvatarColor(message.sender.username);
 
         messageElement.appendChild(avatarElement);
 
         var usernameElement = document.createElement('span');
-        var usernameText = document.createTextNode(message.user.username);
+        var usernameText = document.createTextNode(message.sender.username);
         usernameElement.appendChild(usernameText);
         messageElement.appendChild(usernameElement);
     }
