@@ -107,10 +107,10 @@ function onMessageReceived(message) {
 
     if(message.type === 'JOIN') {
         messageElement.classList.add('event-message');
-        message.content = message.sender.username + ' joined!';
+        message.content = message.sender.username + ' entrou!';
     } else if (message.type === 'LEAVE') {
         messageElement.classList.add('event-message');
-        message.content = message.sender.username + ' left!';
+        message.content = message.sender.username + ' deixou!';
     } else {
         messageElement.classList.add('chat-message');
 
