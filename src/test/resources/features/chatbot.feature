@@ -12,4 +12,5 @@ Funcionalidade: Conversar com chatbot
     Exemplos:
         | username    | opcao aplicativo     | mensagem        | resultado esperado          |
         | Anderson    |   messages           |   Bom dia       |  Bom dia!                   |
+        | Anderson    |   messages           |   Boa noite     |  Boa noite!                   |
 
