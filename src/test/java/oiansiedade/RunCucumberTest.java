@@ -8,7 +8,10 @@ import cucumber.api.junit.Cucumber;
 
 @SpringBootTest
 @RunWith(Cucumber.class)
-@CucumberOptions(plugin = {"pretty"})
+@CucumberOptions(
+		features = "src/test/resources/features/",
+		plugin = {"pretty"}
+		)
 public class RunCucumberTest {
     
 }
