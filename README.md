@@ -4,7 +4,7 @@
 
 <del> UM MICROSERVIÇO DE MENSAGENS</del>
 
-<del> TESTES (UNITÁRIOS + INTEGRAÇÃO) </del>
+<del> TESTES (BDD - CUCUMBER) </del>
 
 <del> USO DE BANCO DE DADOS MYSQL</del>
 
