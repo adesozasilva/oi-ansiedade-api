@@ -2,7 +2,7 @@
 
 ### OS ITENS INCLUSOS ###
 
-<del> UM MICROSERVIÇO DE MENSAGENS</del>
+<del> UM MICROSERVIÇO COM CHAT</del>
 
 <del> TESTES (BDD - CUCUMBER) </del>
 
