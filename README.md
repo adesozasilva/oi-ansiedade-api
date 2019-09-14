@@ -95,9 +95,9 @@ public class ChatMessageService {
 # Padrões de arquitetura
 
 ```
-DDD: Relacionado do submdomínios DDD(Domain Driven Design)
+DDD: Serviços relacionados ao submdomínios DDD(Domain Driven Design)
 RPI: Comunicação síncrona via request/response
-BD: por serviço
+BD: Um banco de dados por serviço
 ```
 
 
