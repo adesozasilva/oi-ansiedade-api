@@ -21,7 +21,9 @@
 
 # Padrões de Projetos
 Padrões GOF Utilizados
-- Adapter
+- Bridge
+
+Esse padrão desacopla o serviço abstrato de sua implementação para que possam variar independentemente do serviço
 
 Exemplo:
 
