@@ -23,7 +23,7 @@
 Padrões GOF Utilizados
 - Bridge
 
-Esse padrão desacopla o serviço abstrato de sua implementação para que possam variar independentemente do serviço
+Esse padrão desacopla o serviço abstrato de sua implementação para que possam variar independentemente do provedor.
 
 Exemplo:
 
