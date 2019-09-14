@@ -1,7 +1,7 @@
 # language: pt
 @chatbot
 Funcionalidade: Conversar com chatbot
-  Usuário conversa com um chatbot sobre um problema está enfretando
+  Usuário conversa com um chatbot sobre um problema que está enfretando
 
   @envia_messagem
   Esquema do Cenario: Cliente envia uma mensagem

@@ -31,7 +31,7 @@ function connect(event) {
 
 
 function onConnected() {
-	var chatMessage = JSON.parse('{"type":"JOIN","content":null,"sender":{"username":"Anderson"}}');
+	var chatMessage = JSON.parse('{"type":"JOIN","content":null,"sender":{"username":"'+sender.username+'"}}');
 	onMessageReceived(chatMessage);
 	var request = new XMLHttpRequest();
 	request.open('GET', 'http://localhost:8080/messages?username=Anderson', true);

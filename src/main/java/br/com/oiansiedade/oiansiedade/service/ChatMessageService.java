@@ -40,6 +40,8 @@ public class ChatMessageService {
 
 	public List<ChatMessage> findMessagesByUsername(String username) {
 		User user = userRepository.findByUsername(username);
+		if(user == null) user = userRepository.save(new User(username));
+		
 		List<ChatMessage> messages = (List<ChatMessage>) chatMessageRepository.findByRecipient(user);
 		
 		return messages;
@@ -47,5 +49,15 @@ public class ChatMessageService {
 
 	private User getLoggedUser() {
 		return userRepository.findByUsername("Anderson");
+	}
+
+
+	public ChatMessage updateMessage(ChatMessage chatMessage) {
+		if(chatMessage.getId() == null) throw new RuntimeException("Não foi possível atualizar a mensagem");
+		
+		ChatMessage updatedMessage = chatMessageRepository.save(chatMessage);
+		
+		return updatedMessage;
+		
 	}
 }

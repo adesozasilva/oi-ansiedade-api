@@ -12,7 +12,7 @@ public class ChatBotDialogFlowService implements ChatBotService {
 	@Override
 	public ChatMessage talk(ChatMessage chatMessage) {
 		String answer = replyBasedOnMessage(chatMessage);
-		return new ChatMessage(ChatMessage.MessageType.CHAT, answer, new User("DialogFlow Chat"));
+		return new ChatMessage(ChatMessage.MessageType.CHAT, answer, new User("ChatBot"));
 	}
 
 	private String replyBasedOnMessage(ChatMessage chatMessage) {

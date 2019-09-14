@@ -28,6 +28,10 @@ public class ChatMessage {
 		this.content = content;
 		this.sender = sender;
 	}
+    
+    public Long getId() {
+		return id;
+	}
 
 	public MessageType getType() {
         return type;
@@ -52,6 +56,7 @@ public class ChatMessage {
     public void setSender(User sender) {
 		this.sender = sender;
 	}
+
 
 
 }

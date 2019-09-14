@@ -18,9 +18,9 @@ public class OiansiedadeApplication {
 	@PostConstruct
 	private void init() {
 		User lodgedUser = userRepository.findByUsername("Anderson");
-		User chatBotUser = userRepository.findByUsername("DialogFlow Chat");
+		User chatBotUser = userRepository.findByUsername("ChatBot");
 		if(lodgedUser == null) userRepository.save(new User("Anderson"));
-		if(chatBotUser == null) userRepository.save(new User("DialogFlow Chat"));
+		if(chatBotUser == null) userRepository.save(new User("ChatBot"));
 	}
 
 	public static void main(String[] args) {

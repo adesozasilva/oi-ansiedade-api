@@ -20,7 +20,7 @@ public class ChatController {
 	
 	@Autowired
 	private ChatMessageService chatMessageservice;
-
+	
 	@PostMapping
 	public ChatMessage sendMessage(@RequestBody ChatMessage chatMessage) {
 		
@@ -36,6 +36,6 @@ public class ChatController {
 
 		return messages;
 	}
-
+	
 
 }

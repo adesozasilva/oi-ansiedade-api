@@ -9,8 +9,6 @@ services:
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
     ports:
       - "3306:3306"
-    environment:
-      - MYSQL_HOST://mysql:3306/myapp?useUnicode=true&characterEncoding=utf8&useSSL=false
   app:
    build:
     dockerfile: ./Dockerfile
@@ -19,6 +17,8 @@ services:
    container_name: oiansiedade-api
    ports:
       - "8080:8080"
+   environment:
+     - MYSQL_HOST=db
    depends_on:
       - "db"
    links:
