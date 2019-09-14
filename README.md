@@ -75,19 +75,19 @@ Usabilidade
 @Service
 public class ChatMessageService {
 
-	@Autowired
-	private ChatBotService chatBotDialogFlowService;
+  @Autowired
+  private ChatBotService chatBotDialogFlowService;
   
   @Autowired
-	private ChatBotService chatBotIbmWatsonService;
-	
-	
+  private ChatBotService chatBotIbmWatsonService;
+		
   public ChatMessage sendMessage(ChatMessage chatMessage) {
-			ChatMessage answerOfDialogFlow = chatBotDialogFlowService.talk(chatMessage);
+      ChatMessage answerOfDialogFlow = chatBotDialogFlowService.talk(chatMessage);
       //ChatMessage answerMessageOfIbmWatson = chatBotIbmWatsonService.talk(chatMessage);
 			
       return answerOfDialogFlow;
-	}
+  }
+  
 }
 
 ```
