@@ -1,10 +1,10 @@
-#Para executar rode os seguintes comandos:
+# Para executar rode os seguintes comandos:
 
 ```docker-compose build```
 
 ```docker-compose up -d```
 
-# OS ITENS INCLUSOS
+### OS ITENS INCLUSOS ###
 
 <del> UM MICROSERVIÇO DE MENSAGENS</del>
 
