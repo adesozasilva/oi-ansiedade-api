@@ -1,6 +1,6 @@
 # Microservices de Chat
 
-# Para executar rode os seguintes comandos:
+### Para executar rode os seguintes comandos:
 ```docker-compose build```
 
 ```docker-compose up -d```
