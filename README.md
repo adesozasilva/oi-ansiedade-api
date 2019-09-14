@@ -1,21 +1,19 @@
-# INSTRUÇÕES: RESPONDER OS ITENS
+#Para executar rode os seguintes comandos:
 
-<del> UM MICROSERVIÇO OU CLASSE COM AÇÕES CRUD	3 PONTOS (+ 1 PONTO / MICROSERVIÇO) . </del>
+```docker-compose build```
 
-TESTES (UNITÁRIOS + INTEGRAÇÃO + UI)	    		+ 1  OU + 2 OU + 3 PONTOS
+```docker-compose up -d```
 
-<del> USO DE BANCO DE DADOS 						+ 2 PONTOS </del>
+# OS ITENS INCLUSOS
 
-<del> DEPLOY VIA DOCKER								+ 1 PONTO </del>
+<del> UM MICROSERVIÇO DE MENSAGENS</del>
 
-COMUNICAÇÃO SINCRONA API	COM SWAGGER		+ 2 PONTOS
+<del> TESTES (UNITÁRIOS + INTEGRAÇÃO) </del>
 
-COMUNICAÇÃO ASSINCRONA EVENTOS				+ 2 PONTOS
+<del> USO DE BANCO DE DADOS MYSQL</del>
 
-<del>FRONT END 										+ 2 PONTOS</del>
+<del> DEPLOY VIA DOCKER	</del>
 
-INTEGRAÇÃO SLACK								+ 1 PONTO
+<del>FRONT END </del>
 
-
-PONTUAÇÃO TOTAL P/ ESCOLHER : 16 PONTOS
 
