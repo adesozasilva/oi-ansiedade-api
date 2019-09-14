@@ -2,15 +2,15 @@
 
 ### OS ITENS INCLUSOS ###
 
-<del> UM MICROSERVIÇO DE CHAT(Envia(POST HTTP) e recebe mensagem(GET HTTP)</del>
+- UM MICROSERVIÇO DE CHAT(Envia(POST HTTP) e recebe mensagem(GET HTTP)
 
-<del> TESTES (BDD - CUCUMBER) </del>
+- TESTES (BDD - CUCUMBER)
 
-<del> USO DE BANCO DE DADOS MYSQL</del>
+- USO DE BANCO DE DADOS MYSQL
 
-<del> DEPLOY VIA DOCKER	</del>
+- DEPLOY VIA DOCKER
 
-<del> FRONT END </del>
+- FRONT END (HTML, CSS E JAVASCRIPT)
 
 ### Para executar rode os seguintes comandos:
 
