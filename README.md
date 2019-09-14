@@ -2,7 +2,7 @@
 
 ### OS ITENS INCLUSOS ###
 
-<del> UM MICROSERVIÇO COM CHAT</del>
+<del> UM MICROSERVIÇO DE CHAT(Envia(POST HTTP) e recebe mensagem(GET HTTP)</del>
 
 <del> TESTES (BDD - CUCUMBER) </del>
 
