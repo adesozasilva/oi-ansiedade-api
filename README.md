@@ -55,7 +55,7 @@ public class ChatBotDialogFlowService implements ChatBotService {
 	
 	@Override
 	public ChatMessage talk(ChatMessage chatMessage) {
-            //Implmentação do chat do DialogFlow
+            //Implementação do chat do DialogFlow
 	}
   
 }
@@ -64,7 +64,7 @@ public class ChatBotIbmWatsonService implements ChatBotService {
 	
 	@Override
 	public ChatMessage talk(ChatMessage chatMessage) {
-            //Implmentação do chat do  IBM Watson
+            //Implementação do chat do  IBM Watson
 	}
   
 }
